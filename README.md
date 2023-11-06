@@ -15,9 +15,12 @@ Sebelum menjalankan kode ini, pastikan Anda memiliki persyaratan berikut:
 
 ## Penjelasan 
 1.Impor fungsi yang diperlukan dari pustaka 'google_play_scraper'.
+
 2. Gunakan fungsi 'reviews' untuk mengambil ulasan aplikasi dengan nama paket 'com.nianticlabs.pokemongo'.
-3. Tentukan opsi tambahan seperti bahasa, negara, urutan pengurutan, jumlah ulasan yang akan diambil , dan penyaringan berdasarkan skor tertentu.
-4. jalankan kode
+   
+4. Tentukan opsi tambahan seperti bahasa, negara, urutan pengurutan, jumlah ulasan yang akan diambil , dan penyaringan berdasarkan skor tertentu.
+   
+6. jalankan kode
 
 Setelah melakukan Crawling data, kita akan mengimport data melalui ekosistem hadoop yaitu dengan Apache Sqoop. sebelumnya kita bisa pull mysql dan phpmyadmin dari docker hub
 ## Pull Mysql dan PHPMyadmin dari docker hub
