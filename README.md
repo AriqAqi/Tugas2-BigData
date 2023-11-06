@@ -49,3 +49,4 @@ sqoop import --connect jdbc:mysql://localhost:8081/reviews --username root --pas
 --table reviews adalah nama tabel di basis data MySQL yang akan diimpor ke HDFS
 --target-dir /Users/aqil adalah direktori target di HDFS di mana data yang diimpor akan disimpan
 
+
