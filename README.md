@@ -16,9 +16,9 @@ Setelah mengunduh image Mysql dan PHPMyadmin dari Docker Hub, kita dapat jalanka
 docker run --name mysql_db -e MYSQL_ROOT_PASSWORD=000 -d mysql:latest
 ```
 --name adalah nama container dari Mysql
-MYSQL_ROOT_PASSWORD=000 adalah password untuk Mysqlnya.
+MYSQL_ROOT_PASSWORD=000 adalah password untuk Mysqlnya
 
-mysql:latest adalah versi dari Mysqlnya.
+mysql:latest adalah versi dari Mysqlnya
 
 Setelah itu kita dapat jalankan container PHPMyadmin:
 ```
@@ -48,6 +48,7 @@ Setelah dijalankan kita akan menuliskan perintah untuk mengimport data yang suda
 sqoop import --connect jdbc:mysql://localhost:8081/reviews --username root --password 000 --table reviews --target-dir /Users/aqila
 ```
 //localhost:8081/reviews adalah URL koneksi ke basis data MySQL yang sudah dibuat sebelumnya
+
 --username root adalah nama pengguna (username) yang digunakan untuk mengakses basis data MySQL
 
 --password 000 adalah kata sandi (password) yang digunakan untuk mengakses basis data MySQL
