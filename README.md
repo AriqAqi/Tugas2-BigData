@@ -17,6 +17,7 @@ docker run --name mysql_db -e MYSQL_ROOT_PASSWORD=000 -d mysql:latest
 ```
 --name adalah nama container dari Mysql
 MYSQL_ROOT_PASSWORD=000 adalah password untuk Mysqlnya.
+
 mysql:latest adalah versi dari Mysqlnya.
 
 Setelah itu kita dapat jalankan container PHPMyadmin:
@@ -24,8 +25,11 @@ Setelah itu kita dapat jalankan container PHPMyadmin:
 docker run --name phpmyadmin_db -d --link mysql_db:db -p 8081:80 phpmyadmin:latest
 ```
 --name adalah nama container dari Mysql
+
 --link mysql_db:db adalah menghubungkan database kita dengan container Mysql yang sebelumnya sudah dibuat
+
 -p 8081:80 adalah membuka port 8081 dan membinding ke port 80 
+
 phpmyadmin:latest adalah versi dari PHPMyadmin
 
 Setelah itu kita dapat mengimport output dari crawling data ke localhost:8081
@@ -45,8 +49,12 @@ sqoop import --connect jdbc:mysql://localhost:8081/reviews --username root --pas
 ```
 //localhost:8081/reviews adalah URL koneksi ke basis data MySQL yang sudah dibuat sebelumnya
 --username root adalah nama pengguna (username) yang digunakan untuk mengakses basis data MySQL
+
 --password 000 adalah kata sandi (password) yang digunakan untuk mengakses basis data MySQL
+
 --table reviews adalah nama tabel di basis data MySQL yang akan diimpor ke HDFS
+
 --target-dir /Users/aqil adalah direktori target di HDFS di mana data yang diimpor akan disimpan
+
 
 
