@@ -73,5 +73,36 @@ sqoop import --connect jdbc:mysql://localhost:8081/reviews --username root --pas
 
 --target-dir /Users/aqil adalah direktori target di HDFS di mana data yang diimpor akan disimpan
 
+## Spark 
+
+# Panduan Instalasi Apache Spark di Jupyter Notebook
+
+Panduan ini akan menjelaskan langkah-langkah untuk menginstal Apache Spark dan menghubungkannya dengan Jupyter Notebook. Anda juga akan belajar cara menjalankan kode PySpark di Jupyter Notebook.
+
+## Langkah 1: Instalasi Apache Spark
+
+1. Unduh Apache Spark dari [situs resmi Apache Spark](https://spark.apache.org/downloads.html).
+
+2. Ekstrak file tarball Spark yang diunduh ke direktori yang Anda inginkan di sistem Anda.
+
+3. Atur variabel lingkungan `SPARK_HOME` untuk menunjuk ke direktori Spark yang diekstrak.
+
+4. Pastikan bahwa Java terinstal dan telah diatur dalam variabel lingkungan `JAVA_HOME`.
+
+## Langkah 2: Instalasi PySpark
+
+- Anda dapat menginstal PySpark dengan menggunakan pip atau conda:
+
+  Menggunakan pip:
+  ```bash
+  pip install pyspark
+
+Untuk menguji apakah Spark telah terhubung dengan Jupyter Notebook, jalankan kode berikut dalam notebook:
+```bash
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("example").getOrCreate()
+df = spark.createDataFrame([(1, "Ariq"), (2, "Fauzan")], ["id", "name"])
+df.show()
 
 
