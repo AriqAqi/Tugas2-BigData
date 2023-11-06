@@ -16,8 +16,8 @@ Setelah mengunduh image Mysql dan PHPMyadmin dari Docker Hub, kita dapat jalanka
 docker run --name mysql_db -e MYSQL_ROOT_PASSWORD=000 -d mysql:latest
 ```
 --name adalah nama container dari Mysql
-MYSQL_ROOT_PASSWORD=000 adalah password untuk Mysqlnya
-mysql:latest adalah versi dari Mysqlnya
+MYSQL_ROOT_PASSWORD=000 adalah password untuk Mysqlnya.
+mysql:latest adalah versi dari Mysqlnya.
 
 Setelah itu kita dapat jalankan container PHPMyadmin:
 ```
